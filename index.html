@@ -3,221 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultima Lifestyle | Nepali Electric Brand</title>
-<meta name="description" content="Ultima Lifestyle - Leading Nepali electric brand providing fans, inverters, wires, batteries and smart energy solutions. Located in Butwal, Nepal.">
+<title>Ultima Lifestyle | Online Store</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f172a;color:#fff;}
+.container{width:90%;max-width:1200px;margin:auto;}
+section{padding:80px 0;}
+h1,h2{margin-bottom:20px;}
+.btn{padding:10px 20px;background:#38bdf8;border:none;color:#000;border-radius:5px;cursor:pointer;font-weight:600;}
+.btn:hover{background:#fff;}
 
-/* ===== Global ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-    scroll-behavior:smooth;
-}
+/* HEADER */
+header{background:#020617;padding:20px 0;position:fixed;width:100%;z-index:1000;}
+nav{display:flex;justify-content:space-between;align-items:center;}
+.logo{color:#38bdf8;font-size:22px;font-weight:700;}
+.cart-btn{cursor:pointer;background:#38bdf8;padding:8px 15px;border-radius:5px;color:#000;font-weight:600;}
 
-body{
-    background:#0f172a;
-    color:#fff;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:80px 0;
-}
-
-h1,h2{
-    margin-bottom:20px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:#38bdf8;
-    color:#000;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#fff;
-}
-
-/* ===== Header ===== */
-header{
-    background:#020617;
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #1e293b;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    color:#38bdf8;
-    font-weight:700;
-    font-size:22px;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:20px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#fff;
-    font-weight:500;
-}
-
-nav ul li a:hover{
-    color:#38bdf8;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-}
-
-/* ===== Hero ===== */
+/* HERO */
 .hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),
-    url('https://images.unsplash.com/photo-1581092921461-39b2f2b6b1b4') center/cover no-repeat;
+height:100vh;
+display:flex;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),
+url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f') center/cover no-repeat;
+}
+.hero h1{font-size:48px;color:#38bdf8;}
+.hero p{margin:20px 0;font-size:18px;}
+
+/* PRODUCTS */
+.products{background:#1e293b;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.product{background:#0f172a;padding:20px;border-radius:10px;text-align:center;}
+.product img{width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:15px;}
+.price{margin:10px 0;font-weight:600;color:#38bdf8;}
+
+/* CART */
+.cart{
+position:fixed;
+top:0;
+right:-400px;
+width:350px;
+height:100%;
+background:#020617;
+padding:20px;
+transition:0.4s;
+overflow-y:auto;
+z-index:2000;
+}
+.cart.active{right:0;}
+.cart h2{margin-bottom:20px;}
+.cart-item{margin-bottom:15px;border-bottom:1px solid #1e293b;padding-bottom:10px;}
+.total{font-weight:700;margin-top:20px;}
+
+.close-cart{
+cursor:pointer;
+background:red;
+color:#fff;
+padding:5px 10px;
+border-radius:5px;
 }
 
-.hero h1{
-    font-size:48px;
-    color:#38bdf8;
-}
+/* CONTACT */
+.contact{background:#0f172a;}
+input,textarea{width:100%;padding:10px;margin:10px 0;border:none;border-radius:5px;}
+iframe{width:100%;height:250px;border:0;border-radius:10px;margin-top:20px;}
 
-.hero p{
-    margin:20px 0;
-    font-size:18px;
-}
-
-/* ===== Products ===== */
-.products{
-    background:#1e293b;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.product{
-    background:#0f172a;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    transition:0.3s;
-}
-
-.product:hover{
-    transform:translateY(-10px);
-}
-
-.product img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-/* ===== About ===== */
-.about{
-    text-align:center;
-}
-
-/* ===== Contact ===== */
-.contact{
-    background:#1e293b;
-}
-
-form{
-    display:grid;
-    gap:15px;
-    margin-top:20px;
-}
-
-input,textarea{
-    padding:12px;
-    border:none;
-    border-radius:5px;
-}
-
-iframe{
-    width:100%;
-    height:300px;
-    border-radius:10px;
-    margin-top:30px;
-    border:0;
-}
-
-/* ===== WhatsApp Button ===== */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:#fff;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    text-decoration:none;
-}
-
-/* ===== Footer ===== */
-footer{
-    background:#020617;
-    text-align:center;
-    padding:20px;
-}
-
-/* ===== Responsive ===== */
-@media(max-width:768px){
-    nav ul{
-        flex-direction:column;
-        position:absolute;
-        right:0;
-        top:70px;
-        background:#020617;
-        width:200px;
-        display:none;
-        padding:20px;
-    }
-    nav ul.active{
-        display:flex;
-    }
-    .menu-toggle{
-        display:block;
-    }
-}
-
+footer{text-align:center;padding:20px;background:#020617;}
 </style>
 </head>
 
@@ -227,110 +82,142 @@ footer{
 <div class="container">
 <nav>
 <div class="logo">Ultima Lifestyle ⚡</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<ul id="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#products">Products</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="#" onclick="toggleLanguage()">नेपाली</a></li>
-</ul>
+<div>
+<span class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="cart-count">0</span>)</span>
+</div>
 </nav>
 </div>
 </header>
 
-<section class="hero" id="home">
+<!-- HERO -->
+<section class="hero">
 <div class="container">
-<h1 id="hero-title">Powering Nepal with Innovation</h1>
-<p id="hero-text">Reliable • Efficient • Advanced Electric Solutions</p>
-<a href="#products" class="btn">Explore Products</a>
+<h1>Welcome to Ultima Lifestyle Store</h1>
+<p>Smartphones • TVs • Laptops • Gadgets • Accessories</p>
 </div>
 </section>
 
-<section class="products" id="products">
+<!-- PRODUCTS -->
+<section class="products">
 <div class="container">
-<h2>Our Products</h2>
-<div class="product-grid">
+<h2>Featured Products</h2>
+<div class="grid">
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1581091215367-59ab6b4f5c45">
-<h3>Electric Fans</h3>
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<h3>Smartphone</h3>
+<div class="price">Rs. 25,000</div>
+<button class="btn" onclick="addToCart('Smartphone',25000)">Add to Cart</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68">
-<h3>Inverters</h3>
+<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
+<h3>Smart TV</h3>
+<div class="price">Rs. 65,000</div>
+<button class="btn" onclick="addToCart('Smart TV',65000)">Add to Cart</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1584270354949-1b52d2c6d6f1">
-<h3>Wires & Cables</h3>
+<img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+<h3>Laptop</h3>
+<div class="price">Rs. 80,000</div>
+<button class="btn" onclick="addToCart('Laptop',80000)">Add to Cart</button>
 </div>
+
 <div class="product">
-<img src="https://images.unsplash.com/photo-1584277261846-c6a1672ed979">
-<h3>Batteries</h3>
+<img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad">
+<h3>Earbuds</h3>
+<div class="price">Rs. 3,500</div>
+<button class="btn" onclick="addToCart('Earbuds',3500)">Add to Cart</button>
 </div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1580910051074-3eb694886505">
+<h3>Power Bank</h3>
+<div class="price">Rs. 2,000</div>
+<button class="btn" onclick="addToCart('Power Bank',2000)">Add to Cart</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1589003077984-894e133dabab">
+<h3>Speaker</h3>
+<div class="price">Rs. 6,000</div>
+<button class="btn" onclick="addToCart('Speaker',6000)">Add to Cart</button>
+</div>
+
 </div>
 </div>
 </section>
 
-<section class="about" id="about">
-<div class="container">
-<h2>About Us</h2>
-<p>
-Ultima Lifestyle is a trusted Nepali electric brand located in Belbas, Butwal-13, Rupandehi, Nepal.
-We provide high-quality electrical appliances and innovative energy solutions across Nepal.
-</p>
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+<h2>Your Cart</h2>
+<button class="close-cart" onclick="toggleCart()">Close</button>
+<div id="cart-items"></div>
+<div class="total">Total: Rs. <span id="total">0</span></div>
+<br>
+<a href="https://wa.me/9779765501697" target="_blank">
+<button class="btn">Order via WhatsApp</button>
+</a>
 </div>
-</section>
 
-<section class="contact" id="contact">
+<!-- CONTACT -->
+<section class="contact">
 <div class="container">
 <h2>Contact Us</h2>
-
-<p>Email: <a href="mailto:acharyaprashant1000@gmail.com">acharyaprashant1000@gmail.com</a></p>
-<p>Phone: <a href="tel:+9779765501697">+977-9765501697</a></p>
+<p>Email: acharyaprashant1000@gmail.com</p>
+<p>Phone: +977-9765501697</p>
 <p>Location: Belbas, Butwal-13, Rupandehi, Nepal</p>
 
-<form id="contactForm">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit" class="btn">Send Message</button>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button class="btn">Send Message</button>
 </form>
 
 <iframe src="https://www.google.com/maps?q=Butwal,Nepal&output=embed"></iframe>
-
 </div>
 </section>
 
-<a href="https://wa.me/9779765501697" class="whatsapp" target="_blank">💬</a>
-
 <footer>
-<p>© 2026 Ultima Lifestyle | Nepali Electric Brand</p>
+© 2026 Ultima Lifestyle | All Rights Reserved
 </footer>
 
 <script>
+let cart=[];
+let total=0;
 
-function toggleMenu(){
-document.getElementById("nav-links").classList.toggle("active");
+function toggleCart(){
+document.getElementById("cart").classList.toggle("active");
 }
 
-document.getElementById("contactForm").addEventListener("submit", function(e){
-e.preventDefault();
-alert("Thank you! We will contact you soon.");
-this.reset();
+function addToCart(name,price){
+cart.push({name,price});
+total+=price;
+updateCart();
+}
+
+function updateCart(){
+let cartItems=document.getElementById("cart-items");
+cartItems.innerHTML="";
+cart.forEach((item,index)=>{
+cartItems.innerHTML+=`
+<div class="cart-item">
+${item.name} - Rs.${item.price}
+<button onclick="removeItem(${index})">❌</button>
+</div>
+`;
 });
-
-let nepali = false;
-function toggleLanguage(){
-nepali = !nepali;
-if(nepali){
-document.getElementById("hero-title").innerText = "नेपाललाई शक्ति दिँदै";
-document.getElementById("hero-text").innerText = "भरपर्दो • प्रभावकारी • आधुनिक विद्युतीय समाधान";
-}else{
-document.getElementById("hero-title").innerText = "Powering Nepal with Innovation";
-document.getElementById("hero-text").innerText = "Reliable • Efficient • Advanced Electric Solutions";
-}
+document.getElementById("total").innerText=total;
+document.getElementById("cart-count").innerText=cart.length;
 }
 
+function removeItem(index){
+total-=cart[index].price;
+cart.splice(index,1);
+updateCart();
+}
 </script>
 
 </body>
