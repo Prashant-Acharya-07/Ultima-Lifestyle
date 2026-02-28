@@ -33,6 +33,22 @@ window.onclick = function(event){
 <title>The Boys Shopping Centre | Electric Store Nepal</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+  .search-bar-top{
+  width: 100%;
+  text-align: center;
+  padding: 100px 0 20px 0; /* 100px top padding so it's below header */
+  background: #0f172a;
+  position: relative;
+  z-index: 100;
+}
+
+.search-bar-top input{
+  width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
   .menu{
 display:flex;
 list-style:none;
@@ -183,6 +199,10 @@ color:#38bdf8;
 </div>
 </header>
 
+  <div class="container search-bar-top">
+  <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+</div>
+  
 <section class="hero" id="home">
 <div class="container">
 <h1>Power Your Digital World</h1>
@@ -198,9 +218,6 @@ Our mission is to power your digital world with reliable products and excellent 
 </p>
 </section>
 <section class="container" id="products">
-<div class="search-bar">
-<input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
-</div>
 
 <div class="filters">
 <button onclick="filterCategory('all')">All</button>
