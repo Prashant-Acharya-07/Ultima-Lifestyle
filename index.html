@@ -33,16 +33,18 @@ window.onclick = function(event){
 <title>The Boys Shopping Centre | Electric Store Nepal</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-  .search-bar-top{
+  .search-bar-top {
   width: 100%;
   text-align: center;
-  padding: 100px 0 20px 0; /* 100px top padding so it's below header */
+  padding: 10px 0; /* smaller padding for sticky */
   background: #0f172a;
-  position: relative;
-  z-index: 100;
+  position: sticky;   /* <-- key part */
+  top: 70px;          /* adjust based on header height */
+  z-index: 999;       /* stay above other content */
+  border-bottom: 1px solid #38bdf8;
 }
 
-.search-bar-top input{
+.search-bar-top input {
   width: 300px;
   padding: 10px;
   border: none;
