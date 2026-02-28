@@ -178,6 +178,20 @@ color:#38bdf8;
   color:black;
   border-radius:5px;
 }
+  .logo {
+  display: flex;       /* makes logo + text inline */
+  align-items: center; /* vertically center them */
+  gap: 10px;           /* space between logo and text */
+  color: #38bdf8;
+  font-weight: 700;
+  font-size: 22px;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+.logo-img {
+  height: 40px; /* change this to make logo bigger or smaller */
+  width: auto;  /* keeps the aspect ratio */
+}
 </style>
 </head>
 <body>
@@ -185,7 +199,10 @@ color:#38bdf8;
 <header>
 <div class="container">
 <nav>
-<div class="logo">The Boys Shopping Centre ⚡</div>
+<div class="logo">
+  <img src="https://github.com/Prashant-Acharya-07/The-Boys-Shopping-Centre/blob/main/logo.jpeg" alt="Logo" class="logo-img">
+  The Boys Shopping Centre ⚡
+</div>
 
 <div class="menu-dropdown">
   <button class="menu-btn" onclick="toggleMenu()">Menu ▾</button>
