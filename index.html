@@ -6,6 +6,22 @@
 <title>The Boys Shopping Centre | Electric Store Nepal</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+  .menu{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.menu li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.menu li a:hover{
+color:#38bdf8;
+}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{background:#0f172a;color:white;overflow-x:hidden;}
 body::before{
@@ -58,19 +74,27 @@ footer{text-align:center;padding:20px;background:#020617;}
 <div class="container">
 <nav>
 <div class="logo">The Boys Shopping Centre ⚡</div>
+
+<ul class="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#products">Products/Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
 <div class="cart-btn" onclick="toggleCart()">Cart (<span id="count">0</span>)</div>
 </nav>
 </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="home">
 <div class="container">
 <h1>Power Your Digital World</h1>
 <p>Smartphones • TVs • Laptops • Gadgets • Accessories</p>
 </div>
 </section>
 
-<section class="container">
+<section class="container" id="products">
 <div class="search-bar">
 <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
 </div>
