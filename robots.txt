@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://prashant-acharya-07.github.io/The-Boys-Shopping-Centre/sitemap.xml
+Sitemap: https://prashant-acharya-07.github.io/The-Boys-Shopping-Centre/sitemap_new.xml
